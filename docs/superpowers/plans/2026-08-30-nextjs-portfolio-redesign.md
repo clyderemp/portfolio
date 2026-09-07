@@ -53,5 +53,5 @@
 - [x] Verify: build + screenshot → commit
 
 ### Task 8: Final verification
-- [ ] `npm run build` with `NEXT_PUBLIC_BASE_PATH=/portfolio`; serve `out/` under `/portfolio`, screenshot every section in dark + light, mobile + desktop; fix issues
-- [ ] Lint clean; README updated; final commit
+- [x] `npm run build` with `NEXT_PUBLIC_BASE_PATH=/portfolio`; serve `out/` under `/portfolio`, screenshot every section in dark + light, mobile + desktop; fix issues
+- [x] Lint clean; README updated; final commit

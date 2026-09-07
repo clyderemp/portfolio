@@ -14,6 +14,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { projects, type Project } from "@/content/projects";
+import { withBasePath } from "@/lib/base-path";
 
 export function Projects() {
   return (
@@ -48,8 +49,10 @@ function ProjectCard({ project }: { project: Project }) {
             assets from the old site and only guaranteed legible on white. */}
         <div className="flex h-16 items-center rounded-lg bg-white px-4 ring-1 ring-border">
           <div className="relative w-full" style={{ height: project.logoHeight }}>
+            {/* unoptimized images bypass the loader, so basePath is NOT
+                applied automatically — route through withBasePath. */}
             <Image
-              src={project.logo}
+              src={withBasePath(project.logo)}
               alt={`${project.name} logo`}
               fill
               sizes="240px"

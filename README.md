@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# clyderemp.github.io/portfolio
 
-## Getting Started
+Personal portfolio of **Clyde Rempillo** — software engineer and published
+Model-Driven Engineering researcher. A single-page, statically-exported
+Next.js site deployed to GitHub Pages.
 
-First, run the development server:
+**Live:** https://clyderemp.github.io/portfolio/
+
+## Stack
+
+- **Next.js 16** (App Router, TypeScript, `output: 'export'`) · React 19
+- **Tailwind CSS v4 + shadcn/ui** — design system (dark-first, amber accent)
+- **MUI v9 + @mui/lab** — experience Timeline, Snackbar; palette mapped to the
+  same CSS tokens, styles scoped to a `mui` cascade layer under Tailwind
+- **next-themes** — dark (default) / light toggle via the `.dark` class
+- **motion** — scroll reveals and micro-interactions
+- **react-hook-form + zod** — contact form validation
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # static export to out/
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To preview the export exactly as GitHub Pages serves it (under `/portfolio`):
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+NEXT_PUBLIC_BASE_PATH=/portfolio npm run build
+mkdir -p /tmp/pages && ln -sfn "$PWD/out" /tmp/pages/portfolio
+python3 -m http.server 4173 -d /tmp/pages
+# open http://localhost:4173/portfolio/
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Editing content
 
-## Learn More
+All copy lives in typed modules under `src/content/` (`profile.ts`,
+`experience.ts`, `projects.ts`, `skills.ts`, `education.ts`, `awards.ts`) —
+components never hard-code copy. The résumé PDF is `public/resume/`, project
+logos are `public/images/`.
 
-To learn more about Next.js, take a look at the following resources:
+Non-`next/*` asset URLs (plain `<a href>`, and `next/image` with
+`images.unoptimized`) must go through `withBasePath()` from
+`src/lib/base-path.ts`, or they will 404 under the `/portfolio` prefix.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Pushes to `main` trigger `.github/workflows/deploy.yml`, which builds with
+`NEXT_PUBLIC_BASE_PATH=/portfolio` and publishes `out/` to GitHub Pages.
+One-time setup: repo **Settings → Pages → Source → GitHub Actions**.
 
-## Deploy on Vercel
+### Contact form
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`src/lib/contact.ts` posts to [Web3Forms](https://web3forms.com) when a
+`WEB3FORMS_KEY` repo secret is configured (exposed at build time as
+`NEXT_PUBLIC_WEB3FORMS_KEY`); without it, the form opens a prefilled
+`mailto:` draft instead. Transport failures surface a Snackbar with a
+mailto fallback.
