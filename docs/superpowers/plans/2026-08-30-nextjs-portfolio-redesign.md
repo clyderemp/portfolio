@@ -49,8 +49,8 @@
 - [x] Verify: build + screenshot → commit
 
 ### Task 7: Education/Awards + Contact + Footer
-- [ ] `sections/education-awards.tsx`, `sections/contact.tsx` (react-hook-form + zod; transport in `src/lib/contact.ts`: Web3Forms if key set, else mailto; MUI Snackbar feedback), `sections/footer.tsx`
-- [ ] Verify: build + screenshot → commit
+- [x] `sections/education-awards.tsx`, `sections/contact.tsx` (react-hook-form + zod; transport in `src/lib/contact.ts`: Web3Forms if key set, else mailto; MUI Snackbar feedback), `sections/footer.tsx`
+- [x] Verify: build + screenshot → commit
 
 ### Task 8: Final verification
 - [ ] `npm run build` with `NEXT_PUBLIC_BASE_PATH=/portfolio`; serve `out/` under `/portfolio`, screenshot every section in dark + light, mobile + desktop; fix issues
