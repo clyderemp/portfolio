@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Timeline from "@mui/lab/Timeline";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
@@ -20,6 +21,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { experience, type Role } from "@/content/experience";
+import { withBasePath } from "@/lib/base-path";
+import { cn } from "@/lib/utils";
 
 export function Experience() {
   // Static HTML is the mobile layout; desktop upgrades to alternating sides
@@ -87,9 +90,33 @@ function RoleCard({ role, showPeriod }: { role: Role; showPeriod: boolean }) {
           <p className="font-mono text-xs text-primary">{role.period}</p>
         )}
         <CardTitle>{role.title}</CardTitle>
-        <div>
-          <Badge variant="secondary">{role.org}</Badge>
+        {role.focus && (
+          <p className="text-sm text-primary">{role.focus}</p>
+        )}
+        <div className="flex flex-wrap items-center gap-2">
+          {role.logos.map((logo) => (
+            <span
+              key={logo.name}
+              className={cn(
+                "flex h-9 min-w-12 max-w-24 items-center justify-center rounded-md border border-border/60 bg-white px-2",
+                logo.darkSurface && "bg-[#111827]",
+              )}
+              title={logo.name}
+            >
+              <Image
+                src={withBasePath(logo.image)}
+                alt={`${logo.name} logo`}
+                width={logo.width}
+                height={logo.height}
+                className="h-6 w-auto max-w-20 object-contain"
+              />
+            </span>
+          ))}
+          <Badge variant="secondary" className="max-w-full whitespace-normal text-left">
+            {role.org}
+          </Badge>
         </div>
+        <p className="text-xs text-muted-foreground">{role.location}</p>
       </CardHeader>
       <CardContent className="space-y-3">
         <ul className="space-y-1.5 text-sm text-muted-foreground">

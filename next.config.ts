@@ -10,6 +10,8 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const nextConfig: NextConfig = {
   output: "export",
   basePath,
+  // Allow hot reload when opening the dev server through this LAN address.
+  allowedDevOrigins: ["192.168.8.50"],
   images: {
     // next/image optimization needs a server; Pages is static-only.
     unoptimized: true,

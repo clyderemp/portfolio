@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-labelledby="title desc">
+  <title id="title">WiFi Spatial Mapper</title>
+  <desc id="desc">A blue and violet Wi-Fi signal over a spatial grid beside the project wordmark.</desc>
+  <defs>
+    <linearGradient id="wifi-gradient" x1="8" y1="12" x2="96" y2="88" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(7 5)" fill="none" stroke="url(#wifi-gradient)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 72 42 86 82 66 50 53 10 72Z" stroke-width="3" opacity=".55"/>
+    <path d="m26 65 32 14M42 58l32 14M31 78l40-20M48 85l40-20" stroke-width="2" opacity=".45"/>
+    <path d="M22 34c17-17 43-17 60 0M32 45c11-11 29-11 40 0M42 56c6-6 14-6 20 0" stroke-width="5"/>
+    <circle cx="52" cy="66" r="5" fill="#7C3AED" stroke="none"/>
+  </g>
+  <text x="112" y="45" fill="#17203B" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="1">WiFi</text>
+  <text x="113" y="69" fill="#5B6480" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="3">SPATIAL MAPPER</text>
+</svg>

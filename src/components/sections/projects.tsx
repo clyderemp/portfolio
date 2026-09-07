@@ -42,6 +42,10 @@ export function Projects() {
 }
 
 function ProjectCard({ project }: { project: Project }) {
+  const links =
+    project.links ??
+    (project.href ? [{ label: "Visit project", href: project.href }] : []);
+
   return (
     <Card className="flex flex-col transition hover:-translate-y-1 hover:ring-primary/40">
       <CardHeader>
@@ -56,7 +60,7 @@ function ProjectCard({ project }: { project: Project }) {
               alt={`${project.name} logo`}
               fill
               sizes="240px"
-              className="object-contain object-left"
+              className="object-contain object-center"
             />
           </div>
         </div>
@@ -74,17 +78,20 @@ function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
       </CardContent>
-      {project.href && (
-        <CardFooter>
-          <a
-            href={project.href}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1.5 font-mono text-xs text-primary hover:underline"
-          >
-            visit project
-            <ExternalLinkIcon className="size-3" aria-hidden="true" />
-          </a>
+      {links.length > 0 && (
+        <CardFooter className="flex flex-wrap gap-2">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1.5 font-mono text-[11px] text-primary transition-colors hover:border-primary/60 hover:bg-primary/10"
+            >
+              {link.label}
+              <ExternalLinkIcon className="size-3" aria-hidden="true" />
+            </a>
+          ))}
         </CardFooter>
       )}
     </Card>

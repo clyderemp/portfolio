@@ -4,6 +4,7 @@ import { EducationAwards } from "@/components/sections/education-awards";
 import { Experience } from "@/components/sections/experience";
 import { Footer } from "@/components/sections/footer";
 import { Hero } from "@/components/sections/hero";
+import { OrganizationCarousel } from "@/components/sections/organization-carousel";
 import { Projects } from "@/components/sections/projects";
 import { Skills } from "@/components/sections/skills";
 import { SiteHeader } from "@/components/site-header";
@@ -15,6 +16,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <About />
+        <OrganizationCarousel />
         <Experience />
         <Projects />
         <Skills />

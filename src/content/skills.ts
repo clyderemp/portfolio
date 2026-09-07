@@ -6,10 +6,10 @@ export interface SkillGroup {
 }
 
 export const skillStats = [
-  { value: "10+", label: "years building software" },
-  { value: "8+", label: "years back-end" },
-  { value: "5+", label: "years front-end" },
-  { value: "4+", label: "years model-driven engineering" },
+  { value: "12+", label: "years building software" },
+  { value: "9+", label: "years professional experience" },
+  { value: "5+", label: "years AI/ML & architecture" },
+  { value: "4+", label: "years technical leadership" },
 ] as const;
 
 export const skillGroups: SkillGroup[] = [

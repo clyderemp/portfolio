@@ -9,7 +9,7 @@ Next.js site deployed to GitHub Pages.
 ## Stack
 
 - **Next.js 16** (App Router, TypeScript, `output: 'export'`) · React 19
-- **Tailwind CSS v4 + shadcn/ui** — design system (dark-first, amber accent)
+- **Tailwind CSS v4 + shadcn/ui** — design system (dark-first, blue–purple gradients)
 - **MUI v9 + @mui/lab** — experience Timeline, Snackbar; palette mapped to the
   same CSS tokens, styles scoped to a `mui` cascade layer under Tailwind
 - **next-themes** — dark (default) / light toggle via the `.dark` class
@@ -18,12 +18,30 @@ Next.js site deployed to GitHub Pages.
 
 ## Development
 
+Use Node.js 22 and npm. Commit dependency changes with `package-lock.json`;
+use npm for installs and scripts to match GitHub Actions.
+
 ```bash
-npm install
+npm ci          # install the committed dependency versions
 npm run dev     # http://localhost:3000
 npm run build   # static export to out/
 npm run lint
 ```
+
+For shorter commands in zsh, add `alias nr='npm run'` to `~/.zshrc`, then
+run `source ~/.zshrc` or open a new terminal:
+
+```bash
+nr dev
+nr build
+nr lint
+```
+
+The shortcut runs npm scripts in your current directory.
+
+For testing on your local network, `192.168.8.50` is listed in
+`allowedDevOrigins` in `next.config.ts` so hot reload can connect. If your
+Mac's network address changes, update that entry and restart `npm run dev`.
 
 To preview the export exactly as GitHub Pages serves it (under `/portfolio`):
 
@@ -37,9 +55,10 @@ python3 -m http.server 4173 -d /tmp/pages
 ## Editing content
 
 All copy lives in typed modules under `src/content/` (`profile.ts`,
-`experience.ts`, `projects.ts`, `skills.ts`, `education.ts`, `awards.ts`) —
-components never hard-code copy. The résumé PDF is `public/resume/`, project
-logos are `public/images/`.
+`experience.ts`, `organizations.ts`, `projects.ts`, `skills.ts`, `education.ts`, `awards.ts`) —
+components never hard-code copy. The résumé PDF is `public/resume/CV.pdf`, project
+and organization logos are `public/images/`. Logo provenance is recorded in
+`docs/logo-sources.md`.
 
 Non-`next/*` asset URLs (plain `<a href>`, and `next/image` with
 `images.unoptimized`) must go through `withBasePath()` from

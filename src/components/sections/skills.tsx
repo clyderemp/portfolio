@@ -26,7 +26,7 @@ export function Skills() {
         <dl className="mb-12 grid grid-cols-2 gap-5 md:grid-cols-4">
           {skillStats.map((stat) => (
             <div key={stat.label} className="rounded-xl border bg-card px-5 py-4">
-              <dd className="font-heading text-3xl font-semibold text-primary sm:text-4xl">
+              <dd className="text-gradient w-fit font-heading text-3xl font-semibold sm:text-4xl">
                 {stat.value}
               </dd>
               <dt className="mt-1 text-sm text-muted-foreground">

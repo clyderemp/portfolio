@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" role="img" aria-labelledby="title">
+  <title id="title">Yo Technology</title>
+  <defs>
+    <linearGradient id="yo-gradient" x1="8" y1="8" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="64" height="64" rx="18" fill="url(#yo-gradient)"/>
+  <path d="M18 22h9l9 13 9-13h9L40 42v10h-8V42L18 22Z" fill="white"/>
+  <circle cx="53" cy="49" r="4" fill="#C4B5FD"/>
+  <text x="80" y="35" fill="#111827" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">YO</text>
+  <text x="80" y="53" fill="#64748B" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="600" letter-spacing="2">TECHNOLOGY</text>
+</svg>

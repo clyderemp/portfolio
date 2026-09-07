@@ -15,22 +15,22 @@ export const muiTheme = createTheme({
   colorSchemes: {
     light: {
       palette: {
-        primary: { main: "#9a6207", contrastText: "#fffbeb" },
-        secondary: { main: "#5b6472" },
+        primary: { main: "#315bea", contrastText: "#ffffff" },
+        secondary: { main: "#7940c8" },
         error: { main: "#c8392e" },
-        background: { default: "#faf9f6", paper: "#ffffff" },
-        text: { primary: "#171c26", secondary: "#5b6472" },
-        divider: "#e4e1d6",
+        background: { default: "#f7f9ff", paper: "#ffffff" },
+        text: { primary: "#17203b", secondary: "#596580" },
+        divider: "#dce2f3",
       },
     },
     dark: {
       palette: {
-        primary: { main: "#f5a524", contrastText: "#1a1205" },
-        secondary: { main: "#8b98ac" },
+        primary: { main: "#7cb4ff", contrastText: "#081327" },
+        secondary: { main: "#c49bff" },
         error: { main: "#e5484d" },
-        background: { default: "#0a0e15", paper: "#10161f" },
-        text: { primary: "#e7ebf2", secondary: "#8b98ac" },
-        divider: "rgba(148, 163, 199, 0.16)",
+        background: { default: "#090d1b", paper: "#10172b" },
+        text: { primary: "#e8edff", secondary: "#97a6c7" },
+        divider: "rgba(140, 163, 230, 0.18)",
       },
     },
   },

@@ -17,7 +17,7 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <header className={cn("mb-12", className)}>
-      <p className="font-mono text-sm text-primary">
+      <p className="text-gradient w-fit font-mono text-sm">
         <span aria-hidden="true">{index} · </span>
         {eyebrow}
       </p>

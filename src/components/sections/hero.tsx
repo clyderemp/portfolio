@@ -77,9 +77,9 @@ export function Hero() {
     <section id="top" className="relative overflow-hidden bg-grid">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,var(--glow),transparent)]"
+        className="hero-glow pointer-events-none absolute inset-0"
       />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[7fr_5fr] lg:py-28">
+      <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[7fr_5fr] lg:py-28">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -97,7 +97,7 @@ export function Hero() {
           </Badge>
 
           <h1 className="mt-5 font-heading text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
-            {profile.name}
+            <span className="text-gradient">{profile.name}</span>
           </h1>
 
           {/* The rotating text is decorative; readers get the full list. */}
@@ -183,7 +183,7 @@ function Punct({ children }: { children: React.ReactNode }) {
 
 function TerminalCard() {
   return (
-    <div className="overflow-hidden rounded-xl border bg-card shadow-xl shadow-[var(--glow)]">
+    <div className="gradient-frame overflow-hidden rounded-xl border bg-card shadow-xl shadow-[var(--glow)]">
       <div className="flex items-center gap-2 border-b bg-muted/40 px-4 py-2.5">
         <span className="size-2.5 rounded-full bg-destructive/80" aria-hidden="true" />
         <span className="size-2.5 rounded-full bg-primary/80" aria-hidden="true" />

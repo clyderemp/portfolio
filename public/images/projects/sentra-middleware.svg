@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-labelledby="title desc">
+  <title id="title">Sentra Middleware</title>
+  <desc id="desc">A blue and violet connected-layer symbol beside the Sentra Middleware wordmark.</desc>
+  <defs>
+    <linearGradient id="sentra-gradient" x1="10" y1="12" x2="94" y2="86" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#sentra-gradient)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 30 52 12l34 18-34 18L18 30Z" stroke-width="6"/>
+    <path d="m18 48 34 18 34-18M18 66l34 18 34-18" stroke-width="6"/>
+    <circle cx="18" cy="48" r="4" fill="#2563EB" stroke="none"/>
+    <circle cx="86" cy="48" r="4" fill="#8B5CF6" stroke="none"/>
+  </g>
+  <text x="112" y="46" fill="#17203B" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="2">SENTRA</text>
+  <text x="113" y="70" fill="#5B6480" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="4">MIDDLEWARE</text>
+</svg>
