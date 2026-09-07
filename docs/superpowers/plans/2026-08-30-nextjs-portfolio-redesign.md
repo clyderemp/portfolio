@@ -17,28 +17,28 @@
 - Verification: `npm run build` then serve `out/` at `/portfolio` prefix + screenshots
 
 ### Task 1: Scaffold & toolchain
-- [ ] `create-next-app` (TS, Tailwind, ESLint, App Router, src dir) scaffolded in scratchpad, merged into repo root
-- [ ] Delete legacy template files (`index.html`, `single.html`, `css/`, `js/`, `scss/`, `fonts/`, `prepros-6.config`); move `images/` + `resume/` → `public/`
-- [ ] `shadcn init` + add: button card badge input textarea label separator sheet
-- [ ] Install: `@mui/material @mui/lab @mui/material-nextjs @emotion/react @emotion/styled next-themes motion react-hook-form zod @hookform/resolvers`
-- [ ] Configure `next.config.ts` per Global Constraints; add `.github/workflows/deploy.yml` (Pages via Actions)
-- [ ] Verify: `npm run build` succeeds → commit
+- [x] `create-next-app` (TS, Tailwind, ESLint, App Router, src dir) scaffolded in scratchpad, merged into repo root
+- [x] Delete legacy template files (`index.html`, `single.html`, `css/`, `js/`, `scss/`, `fonts/`, `prepros-6.config`); move `images/` + `resume/` → `public/`
+- [x] `shadcn init` + add: button card badge input textarea label separator sheet
+- [x] Install: `@mui/material @mui/lab @mui/material-nextjs @emotion/react @emotion/styled next-themes motion react-hook-form zod @hookform/resolvers`
+- [x] Configure `next.config.ts` per Global Constraints; add `.github/workflows/deploy.yml` (Pages via Actions)
+- [x] Verify: `npm run build` succeeds → commit
 
 ### Task 2: Theme foundation
-- [ ] `src/app/globals.css`: design tokens (dark-first palette, accent, fonts) for Tailwind v4 `@theme inline` + shadcn vars
-- [ ] `src/theme/mui-theme.ts`: `createTheme({ cssVariables: { colorSchemeSelector: 'class' }, colorSchemes: {...} })` mapped to the same hex values
-- [ ] `src/theme/providers.tsx`: AppRouterCacheProvider + next-themes ThemeProvider + MUI ThemeProvider; `src/app/layout.tsx`: Geist fonts, metadata, InitColorSchemeScript
-- [ ] `src/lib/base-path.ts`: `withBasePath(path)` helper
-- [ ] Verify: build passes → commit
+- [x] `src/app/globals.css`: design tokens (dark-first palette, accent, fonts) for Tailwind v4 `@theme inline` + shadcn vars
+- [x] `src/theme/mui-theme.ts`: `createTheme({ cssVariables: { colorSchemeSelector: 'class' }, colorSchemes: {...} })` mapped to the same hex values
+- [x] `src/theme/providers.tsx`: AppRouterCacheProvider + next-themes ThemeProvider + MUI ThemeProvider; `src/app/layout.tsx`: Geist fonts, metadata, InitColorSchemeScript
+- [x] `src/lib/base-path.ts`: `withBasePath(path)` helper
+- [x] Verify: build passes → commit
 
 ### Task 3: Content modules
-- [ ] `src/content/profile.ts`, `experience.ts` (6 roles), `projects.ts` (6 projects), `skills.ts`, `education.ts` (3), `awards.ts` (3) — migrated from index.html with typos fixed
-- [ ] Verify: `tsc --noEmit` clean → commit
+- [x] `src/content/profile.ts`, `experience.ts` (6 roles), `projects.ts` (6 projects), `skills.ts`, `education.ts` (3), `awards.ts` (3) — migrated from index.html with typos fixed
+- [x] Verify: `tsc --noEmit` clean → commit
 
 ### Task 4: Header + Hero
-- [ ] `site-header.tsx` (sticky glass nav, Sheet mobile menu, theme-toggle, résumé button), `theme-toggle.tsx`, `section-heading.tsx`
-- [ ] `sections/hero.tsx`: availability badge, display name, typewriter roles, mono metadata, CTAs, terminal profile card
-- [ ] Verify: build + screenshot → commit
+- [x] `site-header.tsx` (sticky glass nav, Sheet mobile menu, theme-toggle, résumé button), `theme-toggle.tsx`, `section-heading.tsx`
+- [x] `sections/hero.tsx`: availability badge, display name, typewriter roles, mono metadata, CTAs, terminal profile card
+- [x] Verify: build + screenshot → commit
 
 ### Task 5: About + Experience
 - [ ] `sections/about.tsx` (bio + facts grid), `sections/experience.tsx` (MUI Timeline, alternating on desktop / left-aligned mobile)
