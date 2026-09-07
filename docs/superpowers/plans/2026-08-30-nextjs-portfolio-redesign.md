@@ -45,8 +45,8 @@
 - [x] Verify: build + screenshot → commit
 
 ### Task 6: Projects + Skills
-- [ ] `sections/projects.tsx` (card grid, logos, tag badges, external links), `sections/skills.tsx` (grouped capability cards + stats)
-- [ ] Verify: build + screenshot → commit
+- [x] `sections/projects.tsx` (card grid, logos, tag badges, external links), `sections/skills.tsx` (grouped capability cards + stats)
+- [x] Verify: build + screenshot → commit
 
 ### Task 7: Education/Awards + Contact + Footer
 - [ ] `sections/education-awards.tsx`, `sections/contact.tsx` (react-hook-form + zod; transport in `src/lib/contact.ts`: Web3Forms if key set, else mailto; MUI Snackbar feedback), `sections/footer.tsx`
