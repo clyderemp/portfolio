@@ -41,8 +41,8 @@
 - [x] Verify: build + screenshot → commit
 
 ### Task 5: About + Experience
-- [ ] `sections/about.tsx` (bio + facts grid), `sections/experience.tsx` (MUI Timeline, alternating on desktop / left-aligned mobile)
-- [ ] Verify: build + screenshot → commit
+- [x] `sections/about.tsx` (bio + facts grid), `sections/experience.tsx` (MUI Timeline, alternating on desktop / left-aligned mobile)
+- [x] Verify: build + screenshot → commit
 
 ### Task 6: Projects + Skills
 - [ ] `sections/projects.tsx` (card grid, logos, tag badges, external links), `sections/skills.tsx` (grouped capability cards + stats)
