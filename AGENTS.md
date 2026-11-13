@@ -41,3 +41,26 @@ Recent commits use concise imperative subjects, such as `Add Projects and Skills
 ## Deployment & Configuration
 
 Preserve static-export compatibility. Route local asset URLs in plain anchors and unoptimized images through `withBasePath()` from `src/lib/base-path.ts`. Pushes to `main` deploy automatically. Optional `NEXT_PUBLIC_WEB3FORMS_KEY` enables form delivery; without it, contact uses mailto. Public environment variables are bundled into browser code; never put private credentials there.
+
+<!-- jarvis-core:start -->
+## jarvis-core context (auto-generated — edit outside this block)
+
+**What:** Clyde's personal portfolio site, the current version, rebuilt in Aug–Sep 2026 from an old Colorlib Bootstrap template into a single-page Next.js 16 static export.
+**Stack:** Next.js 16, React 19, TypeScript, Tailwind CSS v4, shadcn/ui, MUI v9, @mui/lab, next-themes, motion, react-hook-form, zod, Web3Forms, GitHub Pages
+
+### Commands
+
+- `npm run dev` — next dev
+- `npm run start` — next start
+- `npm run build` — next build
+- `npm run lint` — eslint
+
+### Branches
+
+Confirm the target branch with Clyde before committing. Conventional Commits; commit/push only when asked.
+
+### Context & memory
+
+- Clyde's shared agent memory (jarvis-core) has notes on this repo — use the `jarvis` MCP `search_memory` tool before exploring.
+
+<!-- jarvis-core:end -->
